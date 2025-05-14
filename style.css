@@ -1,0 +1,192 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.wave-shape {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 60px;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='white'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='white'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='white'%3E%3C/path%3E%3C/svg%3E");
+background-size: cover;
+}
+.hero-bg {
+background-image: linear-gradient(to right, rgba(219, 234, 254, 0.95), rgba(219, 234, 254, 0.8)), url('https://readdy.ai/api/search-image?query=professional%2520cleaning%2520supplies%2520arranged%2520neatly%2520with%2520colorful%2520brushes%252C%2520spray%2520bottles%252C%2520and%2520cleaning%2520cloths%2520on%2520a%2520light%2520blue%2520background%252C%2520bright%2520and%2520cheerful%2520colors%252C%2520clean%2520aesthetic%252C%2520high%2520quality%2520product%2520photography&width=1200&height=600&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+
+
+.service-card {
+transition: all 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+}
+.pricing-card {
+transition: all 0.3s ease;
+}
+.pricing-card:hover {
+transform: translateY(-8px);
+}
+input, select, textarea {
+outline: none;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #2563eb;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #2563eb;
+}
+.custom-checkbox:checked::after {
+content: "✓";
+position: absolute;
+color: white;
+font-size: 14px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #e6f3ff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.team-avatars {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.team-avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -0.75rem;
+}
+.team-avatars img:first-child {
+  margin-left: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
+.animate-scroll-x-reverse {
+  animation: scroll-x-reverse 20s linear infinite;
+}
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-x-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Update these CSS animations to fix the issue */
+
+/* First, let's make sure the outer containers stay fixed */
+.absolute.left-0.right-0.overflow-hidden {
+  /* Container properties remain unchanged */
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* Now let's modify the animations to only move the content */
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-x-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply animations only to the inner content */
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
+
+.animate-scroll-x-reverse {
+  animation: scroll-x-reverse 20s linear infinite;
+}
+
+/* Make sure the colored background containers don't move */
+.animate-scroll-x > div,
+.animate-scroll-x-reverse > div {
+  /* These properties ensure the content is properly positioned */
+  display: flex;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+/* Optional: Pause animation on hover for better user experience */
+.animate-scroll-x:hover,
+.animate-scroll-x-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Carousel containers: background color, rounded, shadow, fixed position */
+.absolute.left-0.right-0.top-3.h-10.overflow-hidden.z-20,
+.absolute.left-0.right-0.bottom-3.h-10.overflow-hidden.z-10 {
+  /* These classes are already set in HTML for background, rounded, shadow, etc. */
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  /* background and border-radius set via HTML classes */
+}
+
+/* Animate only the text content inside the carousel */
+.animate-scroll-x,
+.animate-scroll-x-reverse {
+  display: flex;
+  white-space: nowrap;
+  min-width: max-content;
+  height: 100%;
+  align-items: center;
+}
+
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scroll-x-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-scroll-x {
+  animation: scroll-x 20s linear infinite;
+}
+.animate-scroll-x-reverse {
+  animation: scroll-x-reverse 20s linear infinite;
+}
+
+/* Pause animation on hover for better UX */
+.animate-scroll-x:hover,
+.animate-scroll-x-reverse:hover {
+  animation-play-state: paused;
+}
